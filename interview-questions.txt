@@ -18,3 +18,9 @@ HTML
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 
 
+H5反正不是HTML5,HTML5是HTML的一个标准，而H5更多
+是营销提出来的一个产品名次，是指移动端的 web 或者web app，
+比如微信中易于分享传播.收集信息的页面。还有是嵌套在webview
+中的页面，都是h5。
+
+
