@@ -86,9 +86,57 @@ content + padding + border + margin
 ③四个方向都为0. margin: auto;
 2.flex布局，主轴测轴居中
 3.margin: 0 auto; margin-top父减子高度一半（没有border会塌陷)
-<img src="./eg/垂直居中1.jpg" style="margin: 10px 0 0 300px;float: left;width: 300px;transform: rotate(90deg);transform-origin: 0 0" />
-<img src="./eg/垂直居中2.jpg" style="margin: 100px 0 0 300px;width: 300px;transform: rotate(90deg);transform-origin: 0 0"/>
+<img src="./eg/垂直居中1.jpg" style="margin: 10px 0 0 300px;float: left;width: 300px;transform: rotate(90deg);transform-origin: 0 0;" />
+<img src="./eg/垂直居中2.jpg" style="margin: 100px 0 0 300px;width: 300px;transform: rotate(90deg);transform-origin: 0 0;"/>
+<br />
+<br />
+<br />
+<br />
+<br />
 
-----------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 ## 3.flex 怎么用，常用属性有哪些？
+伸缩布局
+<br />
+```
+怎么去用？
+我有一个父盒子，下面有很多子盒子
+我需要定义父盒子是一个伸缩布局
+display: flex
+
+.box {
+  display: flex;
+}
+<div class="box">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+```
+
+<br />
+
+```
+
+① flex-direction: row;
+                  column
+                  row-reverse(反转)
+                  column-reverse
+
+  注: reverse只是reverse主轴方向，测轴方向不变
+
+② justify-content: flex-start (起点对齐)
+                   flex-end (终点对齐)
+                   center (居中对齐)
+                   space-around (四周环绕)
+                   space-between (两端对齐)
+
+③ align-items: stretch (拉伸，高度适配,这样子元素自身不能写高度)
+
+  注：侧轴对齐没有space，多了个stretch
+
+④ flex-wrap: nowrap (不可以换行, 盒子里面的元素宽度会自动去适配)
+             wrap (可以换行)
+
+```

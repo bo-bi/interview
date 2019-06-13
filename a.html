@@ -5,24 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .div1 {
-            width: 300px;
+        .father {
+            display: flex;
+            flex-direction: row;
+            /* align-items: stretch; */
+            flex-wrap: wrap;
+            width: 600px;
             height: 300px;
-            /* border: 1px solid #ccc; */
-            background-color: red;
+            border: 1px solid #ccc;
         }
-        .div2 {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto;
-            /* margin-top: 100px; */
+        .father div {
+            width: 150px;
+            height: 150px;
             background-color: pink;
+            text-align: center;
+            line-height: 150px;
         }
     </style>
 </head>
 <body>
-    <div class="div1">
-        <div class="div2"></div>
+    <div class="father">
+        <div class="son1">1</div>
+        <div class="son2">2</div>
+        <div class="son3">3</div>
+        <div class="son3">4</div>
+        <div class="son3">5</div>
+        <div class="son3">6</div>
+        <div class="son3">7</div>
+        <div class="son3">8</div>
     </div>
 </body>
 </html>
