@@ -174,3 +174,6 @@ align-content
 <img src="./eg/align-content.png" width="300px"/>
 
 ## 4种定位特点
+
+## CSS 选择器优先级
+!important > 行内样式 > ID选择器 > 类选择器 > 标签选择器
