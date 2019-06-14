@@ -119,6 +119,8 @@ display: flex
 
 ```
 
+写在父元素上的属性有5种，写在子元素上的有3种
+
 ① flex-direction: row;
                   column
                   row-reverse(反转)
@@ -134,9 +136,41 @@ display: flex
 
 ③ align-items: stretch (拉伸，高度适配,这样子元素自身不能写高度)
 
-  注：侧轴对齐没有space，多了个stretch
+  注：侧轴对齐没有space，多了个stretch(align-self 同)
 
 ④ flex-wrap: nowrap (不可以换行, 盒子里面的元素宽度会自动去适配)
              wrap (可以换行)
 
+
+// 使用该属性，必须设置 flex-wrap: wrap
+// 该属性是调整侧轴的,控制换行之后的内容(堆叠的内容)
+⑤ align-content: flex-start
+                 flex-end
+                 space-around
+                 space-between
+                 stretch
+------------------------------------------------------------
+以下写在子元素上：
+
+⑥ // 控制盒子的伸缩比例，写在子元素上
+  flex: 1                 
+  flex: 2       
+
+⑦ // 作用在侧轴上，写在子元素上
+  align-self: flex-start
+              flex-end
+              center
+              stretch
+
+⑧ // 排序，order的值越大，排列的顺序越靠后
+  order: 1
+         5
+         6
+
+
 ```
+align-content
+<br />
+<img src="./eg/align-content.png" width="300px"/>
+
+## 4种定位特点
