@@ -180,3 +180,8 @@ align-content
 
 ## CSS 选择器优先级
 !important > 行内样式 > ID选择器 > 类选择器 > 标签选择器
+
+
+## 冒泡排序
+<img src="./eg/冒泡排序思维图.png" />
+<img src="./eg/冒泡排序代码.png" />
