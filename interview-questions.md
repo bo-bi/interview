@@ -150,6 +150,8 @@ display: flex
                  space-around
                  space-between
                  stretch
+
+  注：这个align属性有space
 ------------------------------------------------------------
 以下写在子元素上：
 
