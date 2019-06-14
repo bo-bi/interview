@@ -146,6 +146,7 @@ display: flex
 // 该属性是调整侧轴的,控制换行之后的内容(堆叠的内容)
 ⑤ align-content: flex-start
                  flex-end
+                 center
                  space-around
                  space-between
                  stretch
