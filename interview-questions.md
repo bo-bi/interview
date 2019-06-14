@@ -184,4 +184,5 @@ align-content
 
 ## 冒泡排序
 <img src="./eg/冒泡排序思维图.png" />
+其中每一趟的次数为了与每一趟的索引相关联
 <img src="./eg/冒泡排序代码.png" />
