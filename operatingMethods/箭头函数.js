@@ -2,7 +2,7 @@ var fn = function () {
     console.log("你好");
 }
 
-// 如果函数体只有一句或者只有一句renturn的值，可以省略花括号{}
+// 如果函数体只有一句或者只有一句renturn，可以省略花括号{}
 var fn1 = () => console.log("你好");
 
 // 上面这个等价于下面这个
