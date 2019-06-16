@@ -6,40 +6,33 @@
     <title>Document</title>
     <style>
         .father {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 1000px;
-            height: 500px;
-            border: 1px solid #ccc;
+            width: 200px;
+            /* height: 50px; */
         }
-        .father div {
-            width: 150px;
-            height: 150px;
-            background-color: pink;
-            text-align: center;
-            line-height: 150px;
-        }
-        .father div:nth-child(1) {
+        .son1 {
+            float: left;
+            width: 50px;
+            height: 50px;
             background-color: pink;
         }
-        .father div:nth-child(2) {
-            background-color: red;
+        .son2 {
+           float: right;
+           width: 50px;
+           height: 50px;
+           background-color: blue;
         }
-        .father div:nth-child(3) {
-            background-color: blue;
+        .bottom {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
         }
     </style>
 </head>
 <body>
     <div class="father">
-        <div class="son1">1</div>
-        <div class="son2">2</div>
-        <div class="son3">3</div>
-        <div class="son1">4</div>
-        <div class="son2">5</div>
-        <div class="son3">6</div>
+        <div class="son1"></div>
+        <div class="son2"></div>
     </div>
+    <div class="bottom"></div>
 </body>
 </html>

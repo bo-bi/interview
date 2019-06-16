@@ -1,10 +1,18 @@
-var arr = [4, 7, 9, 2, 6, 3, 1, 0];
+var arr = [1, 2, 3, 4, 5, 6];
 
-var maxValue = arr[0];
+// console.log(array.indexOf(7)); // -1
+// console.log(array.indexOf(6));
 
-for(var i = 1; i < arr.length; i++) {
-    if(arr[i] > maxValue) {
-        maxValue = arr[i]
-    }
-}
-console.log(maxValue);
+// var result = arr.some( (item, i) => {
+//     return item == 7;
+// });
+
+// console.log(result);
+
+// console.log(arr.includes(7));
+
+
+var result = arr.map( (item, i) => {
+    return item == 2
+})
+console.log(result);
