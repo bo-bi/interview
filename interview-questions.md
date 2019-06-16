@@ -176,6 +176,16 @@ align-content
 <br />
 <img src="./eg/align-content.png" width="300px"/>
 
+## 清除浮动怎么写
+```
+将以下类名加到父元素上
+.clearfix {
+   content: '';
+   display: block;
+   clear: both;
+}
+```
+
 ## 4种定位特点
 1. 静态定位(占位置)
 <br />
