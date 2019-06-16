@@ -176,13 +176,31 @@ align-content
 <br />
 <img src="./eg/align-content.png" width="300px"/>
 
+## BFC 是什么？
+// 举例，不要尝试回答BFC是什么
+<br />
+BFC 的全称是 块级格式化上下文（Block Formatting Context，BFC） 
+<br />
+外边距塌陷问题(外边距 margin)
+<br />
+场景: 一个父盒子一个子盒子，给子盒子设置margin-top，会发现，子盒子并没有向下移动，而是父盒子和子盒子一起发生了塌陷，子盒子并没有发生margin-top
+<br />
+解决：
+<br />
+①给父盒子添加border
+<br />
+②给父盒子设置 overflow: hidden; 触发了元素的bfc(格式化上下文)，这就是BFC
+
 ## 清除浮动怎么写
 ```
 将以下类名加到父元素上
-.clearfix {
+.clearfix:after {
    content: '';
    display: block;
    clear: both;
+}
+.clearfix {
+  zoom: 1; /* IE兼容 */
 }
 ```
 

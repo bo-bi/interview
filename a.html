@@ -6,26 +6,35 @@
     <title>Document</title>
     <style>
         .father {
-            width: 200px;
-            /* height: 50px; */
+           width: 300px;
+           /* height: 100px; */
+        }
+        .son1, .son2 {
+           width: 100px;
+           height: 100px;
         }
         .son1 {
             float: left;
-            width: 50px;
-            height: 50px;
             background-color: pink;
         }
         .son2 {
-           float: right;
-           width: 50px;
-           height: 50px;
-           background-color: blue;
+            float: right;
+            background-color: red;
         }
-        .bottom {
-            width: 100px;
-            height: 100px;
+        .clearfix:after{
+            content: '';
+            display: block; /*或者 table*/
+            clear: both;
+        }
+        .clearfix{
+            zoom: 1; /* IE 兼容*/
+        }
+        .other {
+            width: 300px;
+            height: 300px;
             background-color: purple;
         }
+        
     </style>
 </head>
 <body>
@@ -33,6 +42,6 @@
         <div class="son1"></div>
         <div class="son2"></div>
     </div>
-    <div class="bottom"></div>
+    <div class="other"></div>
 </body>
 </html>
