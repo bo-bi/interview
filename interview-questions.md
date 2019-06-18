@@ -271,6 +271,21 @@ display、浮动、定位
 ## 手写Ajax
 <img src="./eg/手写Ajax.png" />
 
+```
+注意：get和post发送的区别
+//  get 方式提交，没有请求体，如果我要发送数据给服务器，这个数据必须放在地址里面
+
+xhr.open("get","demo02get.php?username=zhangsan");
+xhr.send(null);
+
+// post 提交，发给服务器的数据在请求体当中
+// 如果是post 方式提交，我们必须在给服务器一个请求头
+
+xhr.open("post","demo02post.php");
+xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+xhr.send("username=zhangyang");
+```
+
 ## 1.ES 6 语法知道哪些，分别怎么用？
 ------------------------------------------------------------
 ------------------------------------------------------------
