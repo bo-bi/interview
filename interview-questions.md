@@ -86,8 +86,8 @@ content + padding + border + margin
 ③四个方向都为0. margin: auto;
 2.flex布局，主轴测轴居中
 3.margin: 0 auto; margin-top父减子高度一半（没有border会塌陷)
-<img src="./eg/垂直居中1.jpg" style="margin: 10px 0 0 300px;float: left;width: 300px;transform: rotate(90deg);transform-origin: 0 0;" />
-<img src="./eg/垂直居中2.jpg" style="margin: 100px 0 0 300px;width: 300px;transform: rotate(90deg);transform-origin: 0 0;"/>
+<img src="./eg/垂直居中1.png" />
+<img src="./eg/垂直居中2.png" />
 <br />
 <br />
 <br />
@@ -176,7 +176,7 @@ align-content
 <br />
 <img src="./eg/align-content.png" width="300px"/>
 
-## BFC 是什么？
+## 4.BFC 是什么？
 // 举例，不要尝试回答BFC是什么
 <br />
 BFC 的全称是 块级格式化上下文（Block Formatting Context，BFC） 
@@ -191,7 +191,7 @@ BFC 的全称是 块级格式化上下文（Block Formatting Context，BFC）
 <br />
 ②给父盒子设置 overflow: hidden; 触发了元素的bfc(格式化上下文)，这就是BFC
 
-## 清除浮动怎么写
+## 5.清除浮动怎么写
 ```
 将以下类名加到父元素上
 .clearfix:after {
@@ -204,7 +204,7 @@ BFC 的全称是 块级格式化上下文（Block Formatting Context，BFC）
 }
 ```
 
-## 4种定位特点
+## 6.四种定位特点
 1. 静态定位(占位置)
 <br />
 position: static;
@@ -267,11 +267,20 @@ display、浮动、定位
 
 延伸：有哪些是块级元素、行内元素、行内元素？举例和特点
 
-## CSS 选择器优先级
+## 7.CSS 选择器优先级
 !important > 行内样式 > ID选择器 > 类选择器 > 标签选择器
 
+------------------------------------------------------------------------------------------------------------------------
+# 原生JS
 
+## 手写Ajax
+<img src="./eg/手写Ajax.png" />
+
+## 1.ES 6 语法知道哪些，分别怎么用？
+------------------------------------------------------------
+------------------------------------------------------------
 ## 冒泡排序
 <img src="./eg/冒泡排序思维图.png" />
 其中每一趟的次数为了与每一趟的索引相关联
 <img src="./eg/冒泡排序代码.png" />
+

@@ -1,18 +1,20 @@
-var arr = [1, 2, 3, 4, 5, 6];
+获取用户信息("方方")
+    .then(打印信息)
+    
+function 获取用户信息(name) {
+    return new Promise(function(resolve, reject) {
+        if(name == "魏昊"){
+            resolve("魏昊我认识");
+        }else {
+           reject("查无此人") 
+        }
+    })
+}
+function 打印信息(data) {
+    console.log("打印信息在执行");
+    return new Promise(function(resolve, reject) {
+        resolve(data.slice(0, 2));
+    })
+}
 
-// console.log(array.indexOf(7)); // -1
-// console.log(array.indexOf(6));
 
-// var result = arr.some( (item, i) => {
-//     return item == 7;
-// });
-
-// console.log(result);
-
-// console.log(arr.includes(7));
-
-
-var result = arr.map( (item, i) => {
-    return item == 2
-})
-console.log(result);
