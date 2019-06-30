@@ -294,3 +294,49 @@ xhr.send("username=zhangyang");
 其中每一趟的次数为了与每一趟的索引相关联
 <img src="./eg/冒泡排序代码.png" />
 
+# Vue
+
+## Vue响应式原理
+Vue会遍历data中的属性,使用 Object.defineProperty 将他们全部转化为getter/setter,vue会将自己的逻辑写在里面.每一个组件里面都有一个watcher实例,他会在组件渲染过程中,将接触到的属性收集作为依赖项,之后当依赖项改变时,会触发setter,进而通知watcher,watcher再触发重新渲染.不过vue3.0中已经摒弃了使用Object.defineProperty,改用proxy代理,因为他无法监测数组下标的变化,而且还要对对象属性层层遍历.
+- getter、setter
+```
+var o = {
+    a: 7,
+    get b() { 
+      console.log("触发了getter");
+      return this.a + 1;
+    },
+    set c(x) {
+      console.log("触发了setter");
+      this.a = x / 2
+    }
+};
+
+/*
+    console.log(o); 
+    { a: 8, b: [Getter], c: [Setter] }
+    getter: 是一个获取某个特定属性的值的方法
+    setter: 是一个设定某个属性的值的方法
+*/
+```
+
+# JS
+## 复杂数据类型在内存中的保存
+```
+var arr = [1, 2, 3, 4, 5];
+var newArr = arr;
+arr[0] = 1000; // 赋值的是一个指针
+console.log(newArr);
+
+变量arr中保存的是一个内存地址,这个内存地址指向栈中的一个空间,这个空间存着一个箭头称为指针,指针指向了堆中的一个空间(数据区域),值保存在堆里面.
+
+```
+<img src="./eg/复杂数据类型在内存中的保存.jpg" />
+
+## 面试题
+场景:页面v-for了一个对象,点几一个按钮,向这个对象手动添加了一个属性,this.obj.name="张三",会发现页面没有更新.
+原因:新添加的这个属性不是响应式的,因为他没有初始化在data中,Vue针对这个属性也就没有生成对应的getter/setter,所以无法响应式,视图也就无法更新.(Vue响应式原理)
+解决:(一般都会将属性初始化到data中,如果你非要解决的话)使用Vue.set(this.$set)将它设置为响应式属性,查看data就会有对应的getter/setter
+
+
+
